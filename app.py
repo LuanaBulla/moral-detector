@@ -61,8 +61,7 @@ def infer_values():
     
 @app.route('/', methods=['GET'])
 def index():
-    return '''Welcome to the best moral detector ever! 
-                    Go to ... /predict and enjoy :)'''
+    return '''Welcome to the best moral detector ever!'''
 
 if __name__ == '__main__':
     detector = MoralDetector()
