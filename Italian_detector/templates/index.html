@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Moral Detector</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Moral Detector</h1>
+    <form method="POST" action="/predict">
+        <textarea name="txt" rows="4" cols="50" placeholder="Inserisci qui il testo da analizzare"></textarea>
+        <button type="submit">Analizza</button>
+    </form>
+    {% if result %}
+    <div class="result">
+        {{ result | safe }}
+    </div>
+    {% endif %}
+</body>
+</html>
